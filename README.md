@@ -6,7 +6,7 @@
 
 | 目录 | 内容 | 验证状态 |
 | --- | --- | --- |
-| `Copy/` | `copy`、`mutableCopy`、浅拷贝、递归深拷贝、`NSCopying`、`NSMutableCopying` 以及 NSArray / NSDictionary / NSSet / NSOrderedSet 容器行为 | 已在 iPhone 17 模拟器、iOS 26.5 上运行，17 项断言全部通过 |
+| `Copy/` | `copy`、`mutableCopy`、截图表格四种组合、浅拷贝、递归深拷贝、`NSCopying`、`NSMutableCopying` 以及 NSArray / NSDictionary / NSSet / NSOrderedSet 容器行为 | 已在 iPhone 17 模拟器、iOS 26.5 上运行，25 项断言全部通过 |
 | `KVO/` | 预留 KVO 实验目录 | 等待之前 KVO 仓库的路径或 GitHub 地址 |
 
 ## 运行 Copy 实验

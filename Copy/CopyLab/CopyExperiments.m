@@ -214,6 +214,107 @@ static void ExperimentOtherContainers(void) {
                 [NSString stringWithFormat:@"source=%@ deep=%@", orderedSet, orderedSetDeep]);
 }
 
+static void ExperimentCopyMatrix(void) {
+    // The four rows in the reference table are tested first with strings,
+    // where independence means that the copied value is stored separately.
+    NSMutableString *mutableString = [NSMutableString stringWithString:@"mutable"];
+    NSString *mutableStringCopy = [mutableString copy];
+    NSMutableString *mutableStringMutableCopy = [mutableString mutableCopy];
+
+    NSString *immutableString = [NSString stringWithFormat:@"%@", @"immutable"];
+    NSString *immutableStringCopy = [immutableString copy];
+    NSMutableString *immutableStringMutableCopy = [immutableString mutableCopy];
+
+    [mutableString appendString:@"-source"];
+    [mutableStringMutableCopy appendString:@"-copy"];
+    [immutableStringMutableCopy appendString:@"-copy"];
+
+    PrintResult(@"E8 mutable object + copy -> immutable independent",
+                ![mutableStringCopy isKindOfClass:NSMutableString.class] &&
+                    mutableStringCopy != mutableString &&
+                    [mutableStringCopy isEqualToString:@"mutable"],
+                [NSString stringWithFormat:@"source=%p copy=%p class=%@ value=%@",
+                 mutableString, mutableStringCopy, ClassName(mutableStringCopy), mutableStringCopy]);
+    PrintResult(@"E8 mutable object + mutableCopy -> mutable independent",
+                [mutableStringMutableCopy isKindOfClass:NSMutableString.class] &&
+                    mutableStringMutableCopy != mutableString &&
+                    [mutableStringMutableCopy isEqualToString:@"mutable-copy"],
+                [NSString stringWithFormat:@"source=%p copy=%p class=%@ value=%@",
+                 mutableString, mutableStringMutableCopy, ClassName(mutableStringMutableCopy), mutableStringMutableCopy]);
+    PrintResult(@"E8 immutable object + copy -> immutable",
+                ![immutableStringCopy isKindOfClass:NSMutableString.class] &&
+                    [immutableStringCopy isEqualToString:@"immutable"],
+                [NSString stringWithFormat:@"source=%p copy=%p same=%@ class=%@",
+                 immutableString, immutableStringCopy,
+                 immutableString == immutableStringCopy ? @"YES" : @"NO",
+                 ClassName(immutableStringCopy)]);
+    PrintResult(@"E8 immutable object + mutableCopy -> mutable independent",
+                [immutableStringMutableCopy isKindOfClass:NSMutableString.class] &&
+                    immutableStringMutableCopy != immutableString &&
+                    [immutableStringMutableCopy isEqualToString:@"immutable-copy"],
+                [NSString stringWithFormat:@"source=%p copy=%p class=%@ value=%@",
+                 immutableString, immutableStringMutableCopy,
+                 ClassName(immutableStringMutableCopy), immutableStringMutableCopy]);
+
+    // For containers, copy depth is observable through a mutable nested
+    // element. Foundation copies the outer container but normally shares it.
+    NSMutableString *mutableElementForCopy = [NSMutableString stringWithString:@"element"];
+    NSMutableArray *mutableArrayForCopy = [NSMutableArray arrayWithObject:mutableElementForCopy];
+    NSArray *mutableArrayCopy = [mutableArrayForCopy copy];
+    [mutableElementForCopy appendString:@"-changed"];
+
+    NSMutableString *mutableElementForMutableCopy = [NSMutableString stringWithString:@"element"];
+    NSMutableArray *mutableArrayForMutableCopy = [NSMutableArray arrayWithObject:mutableElementForMutableCopy];
+    NSMutableArray *mutableArrayMutableCopy = [mutableArrayForMutableCopy mutableCopy];
+    [mutableElementForMutableCopy appendString:@"-changed"];
+
+    NSMutableString *immutableElementForCopy = [NSMutableString stringWithString:@"element"];
+    NSArray *immutableArrayForCopy = @[ immutableElementForCopy ];
+    NSArray *immutableArrayCopy = [immutableArrayForCopy copy];
+    [immutableElementForCopy appendString:@"-changed"];
+
+    NSMutableString *immutableElementForMutableCopy = [NSMutableString stringWithString:@"element"];
+    NSArray *immutableArrayForMutableCopy = @[ immutableElementForMutableCopy ];
+    NSMutableArray *immutableArrayMutableCopy = [immutableArrayForMutableCopy mutableCopy];
+    [immutableElementForMutableCopy appendString:@"-changed"];
+
+    PrintResult(@"E9 mutable container + copy -> immutable outer, inner shared",
+                ![mutableArrayCopy isKindOfClass:NSMutableArray.class] &&
+                    mutableArrayCopy != mutableArrayForCopy &&
+                    mutableArrayCopy[0] == mutableElementForCopy &&
+                    [mutableArrayCopy[0] isEqualToString:@"element-changed"],
+                [NSString stringWithFormat:@"outerSame=%@ innerSame=%@ class=%@ value=%@",
+                 mutableArrayForCopy == mutableArrayCopy ? @"YES" : @"NO",
+                 mutableArrayForCopy[0] == mutableArrayCopy[0] ? @"YES" : @"NO",
+                 ClassName(mutableArrayCopy), mutableArrayCopy[0]]);
+    PrintResult(@"E9 mutable container + mutableCopy -> mutable outer, inner shared",
+                [mutableArrayMutableCopy isKindOfClass:NSMutableArray.class] &&
+                    mutableArrayMutableCopy != mutableArrayForMutableCopy &&
+                    mutableArrayMutableCopy[0] == mutableElementForMutableCopy &&
+                    [mutableArrayMutableCopy[0] isEqualToString:@"element-changed"],
+                [NSString stringWithFormat:@"outerSame=%@ innerSame=%@ class=%@ value=%@",
+                 mutableArrayForMutableCopy == mutableArrayMutableCopy ? @"YES" : @"NO",
+                 mutableArrayForMutableCopy[0] == mutableArrayMutableCopy[0] ? @"YES" : @"NO",
+                 ClassName(mutableArrayMutableCopy), mutableArrayMutableCopy[0]]);
+    PrintResult(@"E9 immutable container + copy -> immutable outer, inner shared",
+                ![immutableArrayCopy isKindOfClass:NSMutableArray.class] &&
+                    immutableArrayCopy[0] == immutableElementForCopy &&
+                    [immutableArrayCopy[0] isEqualToString:@"element-changed"],
+                [NSString stringWithFormat:@"outerSame=%@ innerSame=%@ class=%@ value=%@",
+                 immutableArrayForCopy == immutableArrayCopy ? @"YES" : @"NO",
+                 immutableArrayForCopy[0] == immutableArrayCopy[0] ? @"YES" : @"NO",
+                 ClassName(immutableArrayCopy), immutableArrayCopy[0]]);
+    PrintResult(@"E9 immutable container + mutableCopy -> mutable outer, inner shared",
+                [immutableArrayMutableCopy isKindOfClass:NSMutableArray.class] &&
+                    immutableArrayMutableCopy != immutableArrayForMutableCopy &&
+                    immutableArrayMutableCopy[0] == immutableElementForMutableCopy &&
+                    [immutableArrayMutableCopy[0] isEqualToString:@"element-changed"],
+                [NSString stringWithFormat:@"outerSame=%@ innerSame=%@ class=%@ value=%@",
+                 immutableArrayForMutableCopy == immutableArrayMutableCopy ? @"YES" : @"NO",
+                 immutableArrayForMutableCopy[0] == immutableArrayMutableCopy[0] ? @"YES" : @"NO",
+                 ClassName(immutableArrayMutableCopy), immutableArrayMutableCopy[0]]);
+}
+
 void CopyExperimentsRun(void) {
     ExperimentStringCopy();
     ExperimentArrayShallowCopy();
@@ -222,4 +323,5 @@ void CopyExperimentsRun(void) {
     ExperimentNSCopying();
     ExperimentNestedCopy();
     ExperimentOtherContainers();
+    ExperimentCopyMatrix();
 }

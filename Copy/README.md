@@ -6,7 +6,8 @@
 - Foundation 容器 `copy` 的浅拷贝行为；
 - `strong` 与 `copy` 属性保存可变数组时的区别；
 - 自定义对象实现 `NSCopying` / `NSMutableCopying`；
-- 嵌套 `NSArray`、`NSDictionary`、`NSSet`、`NSOrderedSet` 的浅拷贝与递归深拷贝。
+- 嵌套 `NSArray`、`NSDictionary`、`NSSet`、`NSOrderedSet` 的浅拷贝与递归深拷贝；
+- 截图表格中 mutable / immutable 对象配合 `copy` / `mutableCopy` 的四种组合。
 
 ## 运行
 

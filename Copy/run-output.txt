@@ -1,0 +1,24 @@
+2026-09-03 13:04:42.375 CopyLab[27633:8294428] CopyLab: begin
+2026-09-03 13:04:42.375 CopyLab[27633:8294428] PASS E1 NSString copy is immutable | copy=NSTaggedPointerString
+2026-09-03 13:04:42.375 CopyLab[27633:8294428] PASS E1 NSString mutableCopy is mutable | mutableCopy=__NSCFString
+2026-09-03 13:04:42.375 CopyLab[27633:8294428] PASS E2 NSArray copy creates independent outer container | source=0x105e55f50 copy=0x105df8480
+2026-09-03 13:04:42.375 CopyLab[27633:8294428] PASS E2 NSArray copy shares element objects | source[0]=0x105dea5e0 copy[0]=0x105dea5e0
+2026-09-03 13:04:42.375 CopyLab[27633:8294428] PASS E2 mutating shared element affects shallow copy | copy[0]=Tom Wu
+2026-09-03 13:04:42.375 CopyLab[27633:8294428] PASS E2 mutating source container does not change copy container | source.count=2 copy.count=1
+2026-09-03 13:04:42.375 CopyLab[27633:8294428] PASS E3 mutableCopy returns mutable container | class=__NSArrayM count=2
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E4 strong shares the original mutable container | strong.count=2
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E4 copy isolates the outer container | copy.count=1 class=__NSSingleObjectArrayI
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E4 copy NSMutableArray property can hold immutable runtime object | declared=NSMutableArray runtime=__NSSingleObjectArrayI
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E5 custom NSCopying object is independent | original=<CopyPerson: 0x105cff4e0 name=Tom age=20> copy=<CopyPerson: 0x105cff500 name=Jerry age=20>
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E5 custom NSMutableCopying object is independent | original=<CopyPerson: 0x105cff4e0 name=Tom age=20> mutableCopy=<CopyPerson: 0x105cff520 name=Sam age=20>
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E6 nested container copy is shallow | shallow name=Jerry
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E6 recursive copy isolates nested mutable object | deep name=Tom
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E7 NSSet copy shares its element | original=0x105cff4e0 copy=0x105cff4e0
+2026-09-03 13:04:42.376 CopyLab[27633:8294428] PASS E7 NSSet recursive copy replaces its element | original=0x105cff4e0 deep=0x105cff500
+2026-09-03 13:04:42.377 CopyLab[27633:8294428] PASS E7 NSOrderedSet recursive copy preserves order and independence | source={(
+    <CopyPerson: 0x105cff4e0 name=Tom age=20>
+)} deep={(
+    <CopyPerson: 0x105cff560 name=Tom age=20>
+)}
+2026-09-03 13:04:42.377 CopyLab[27633:8294428] CopyLab: end
+com.tommywu.lab.CopyLab: 27633

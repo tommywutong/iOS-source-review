@@ -1,0 +1,23 @@
+name: CopyLab
+options:
+  bundleIdPrefix: com.tommywu.lab
+  deploymentTarget:
+    iOS: "15.0"
+targets:
+  CopyLab:
+    type: application
+    platform: iOS
+    sources:
+      - path: CopyLab
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.CopyLab
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO
+        DEVELOPMENT_TEAM: ""
+        CLANG_ENABLE_OBJC_ARC: YES
+        GCC_C_LANGUAGE_STANDARD: c11
+        SWIFT_VERSION: 5.0

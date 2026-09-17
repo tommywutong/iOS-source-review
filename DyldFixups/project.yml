@@ -1,0 +1,128 @@
+name: DyldFixupsLab
+options:
+  deploymentTarget:
+    iOS: "15.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    DEVELOPMENT_TEAM: JASSJ2R9D6
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: 5.0
+    CLANG_ENABLE_OBJC_ARC: YES
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+    INFOPLIST_KEY_UILaunchScreen_Generation: YES
+targets:
+  Baseline:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.baseline
+        GCC_PREPROCESSOR_DEFINITIONS: "DYLD_EXPERIMENT_VARIANT=0"
+  RebaseDense:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies:
+      - target: RebaseDensePayload
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.rebasedense
+        GCC_PREPROCESSOR_DEFINITIONS: "DYLD_EXPERIMENT_VARIANT=1"
+  RebaseSparse:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies:
+      - target: RebaseSparsePayload
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.rebasesparse
+        GCC_PREPROCESSOR_DEFINITIONS: "DYLD_EXPERIMENT_VARIANT=2"
+  BindRepeated:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies:
+      - target: BindRepeatedPayload
+        embed: true
+      - target: BindProvider
+        embed: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.bindrepeated
+        GCC_PREPROCESSOR_DEFINITIONS: "DYLD_EXPERIMENT_VARIANT=3"
+  BindUnique:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies:
+      - target: BindUniquePayload
+        embed: true
+      - target: BindProvider
+        embed: true
+    settings:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.bindunique
+        GCC_PREPROCESSOR_DEFINITIONS: "DYLD_EXPERIMENT_VARIANT=4"
+  RebaseDensePayload:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Generated/RebaseDense
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.rebasedense.payload
+        PRODUCT_NAME: RebaseDensePayload
+        SKIP_INSTALL: YES
+  RebaseSparsePayload:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Generated/RebaseSparse
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.rebasesparse.payload
+        PRODUCT_NAME: RebaseSparsePayload
+        SKIP_INSTALL: YES
+  BindProvider:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Generated/BindProvider
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.bindprovider
+        PRODUCT_NAME: BindProvider
+        SKIP_INSTALL: YES
+  BindRepeatedPayload:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Generated/BindRepeated
+    dependencies:
+      - target: BindProvider
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.bindrepeated.payload
+        PRODUCT_NAME: BindRepeatedPayload
+        SKIP_INSTALL: YES
+  BindUniquePayload:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Generated/BindUnique
+    dependencies:
+      - target: BindProvider
+    settings:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.bindunique.payload
+        PRODUCT_NAME: BindUniquePayload
+        SKIP_INSTALL: YES

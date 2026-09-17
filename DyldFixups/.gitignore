@@ -1,0 +1,10 @@
+# Generated build inputs are recreated by generate_payloads.py.
+Generated/
+DerivedData*/
+DerivedData/
+build-output.txt
+static-fixups.txt
+run-output.txt
+*.xcuserstate
+xcuserdata/
+.DS_Store

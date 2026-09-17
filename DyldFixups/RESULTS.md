@@ -49,7 +49,7 @@
 
 - **设备**：iPhone 15（`iPhone15,4`，arm64e），iOS 26.6.2（Build 23G90），Developer Mode 已启用。
 - **签名**：免费个人开发者 profile，自动签名；BindUnique 因 App ID 创建周配额耗尽，借用了已注册的 `rebasedense`/`rebasedense.payload` Bundle ID 完成测试，二进制负载仍为 BindUnique 的 4,096 个不同符号绑定。
-- **运行**：每个变体 5 次冷启动（杀进程后重新安装），记录第一次 page fault / pagein 与稳态（后 4 次）均值。
+- **运行**：每个变体安装一次，随后执行 5 次 `--terminate-existing` 的进程重启；记录首次启动与后续 4 次进程重启的 page fault / pagein 均值，完成后卸载该实验 App。
 
 ### 静态与动态对照
 
@@ -65,7 +65,7 @@
 
 1. **RebaseSparse 首次 pageins 高于 RebaseDense**（21 vs 13），尽管两者静态 rebase 数量相同；唯一区别是前者覆盖 128 个分散的 16 KiB 链页，后者仅 1 页。这与“fixup 页面分布影响首次启动资源访问”一致，但本实验不能单独证明因果关系。
 2. **BindRepeated 与 BindUnique 在稳态 pageins 无显著差异**（均值 1.2 vs 1.0），尽管后者有 4,096 个独立导入符号、前者仅 1 个。在此设备、系统版本与二进制规模下，不同导入数量未表现为可观测的 pagein 差异；不能推出“bind 无成本”，但也无法从本实验证明“每个 bind 必然触发新的符号查找 I/O”。
-3. **首次与稳态 faults/pageins 存在明显差距**：首次观测的 faults 在 338–371 之间、pageins 在 13–25 之间；后续观测稳定在 264–278 faults、pageins 接近 1。这是本设备本次运行的观察，不外推为所有设备的固定比例。
+3. **首次启动与同次安装后续进程重启存在明显差距**：首次观测的 faults 在 338–371 之间、pageins 在 13–25 之间；后续观测稳定在 264–278 faults、pageins 接近 1。这是本设备、此安装序列下的观察；未隔离 OS 缓存、安装状态或其他进程活动，因此不将该差异归因为单一机制，也不外推为固定比例。
 
 ### 实验局限
 

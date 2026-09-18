@@ -1,0 +1,300 @@
+===== Baseline run=1 =====
+DYLDLAB_RESULT variant=baseline wall_ns=233045951990041 user_us=3783 system_us=5802 faults=340 pageins=15 cow_faults=33 task_info=0
+DYLDLAB_TIMELINE variant=baseline constructor_ns=233045950869750 main_entry_ns=233045951990041 marker_start_ns=233045951990041 marker_end_ns=233045951990041 exit_ns=233045952024083
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== Baseline run=2 =====
+DYLDLAB_RESULT variant=baseline wall_ns=233047507648291 user_us=4068 system_us=5174 faults=266 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=baseline constructor_ns=233047505861041 main_entry_ns=233047507648291 marker_start_ns=233047507648291 marker_end_ns=233047507648291 exit_ns=233047507703000
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== Baseline run=3 =====
+DYLDLAB_RESULT variant=baseline wall_ns=233049124135291 user_us=3971 system_us=4123 faults=266 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=baseline constructor_ns=233049122889875 main_entry_ns=233049124135291 marker_start_ns=233049124135291 marker_end_ns=233049124135291 exit_ns=233049124175458
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== Baseline run=4 =====
+DYLDLAB_RESULT variant=baseline wall_ns=233049986482166 user_us=4053 system_us=4202 faults=266 pageins=2 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=baseline constructor_ns=233049985249750 main_entry_ns=233049986482166 marker_start_ns=233049986482166 marker_end_ns=233049986482166 exit_ns=233049986531791
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== Baseline run=5 =====
+DYLDLAB_RESULT variant=baseline wall_ns=233050730484916 user_us=3677 system_us=3936 faults=266 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=baseline constructor_ns=233050729322041 main_entry_ns=233050730484916 marker_start_ns=233050730484916 marker_end_ns=233050730484916 exit_ns=233050730533875
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== RebaseDense run=1 =====
+Launched application with com.tommywu.lab.dyldfixups.rebasedense bundle identifier.
+Waiting for the application to terminate…
+DYLDLAB_RESULT variant=rebase_dense wall_ns=233063494179166 user_us=3238 system_us=9588 faults=346 pageins=24 cow_faults=33 task_info=0
+DYLDLAB_TIMELINE variant=rebase_dense constructor_ns=233063493653666 main_entry_ns=233063494179166 marker_start_ns=233063494197041 marker_end_ns=233063494212583 exit_ns=233063494212583
+The app terminated with the exit code 0.
+===== RebaseDense run=2 =====
+DYLDLAB_RESULT variant=rebase_dense wall_ns=233064176118791 user_us=3506 system_us=3408 faults=268 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=rebase_dense constructor_ns=233064175030916 main_entry_ns=233064176118791 marker_start_ns=233064176152458 marker_end_ns=233064176175541 exit_ns=233064176175541
+Launched application with com.tommywu.lab.dyldfixups.rebasedense bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== RebaseDense run=3 =====
+Launched application with com.tommywu.lab.dyldfixups.rebasedense bundle identifier.
+Waiting for the application to terminate…
+DYLDLAB_RESULT variant=rebase_dense wall_ns=233064705471791 user_us=3405 system_us=3391 faults=268 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=rebase_dense constructor_ns=233064704372291 main_entry_ns=233064705471791 marker_start_ns=233064705506041 marker_end_ns=233064705526416 exit_ns=233064705526458
+The app terminated with the exit code 0.
+===== RebaseDense run=4 =====
+DYLDLAB_RESULT variant=rebase_dense wall_ns=233065221093083 user_us=3448 system_us=3478 faults=268 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=rebase_dense constructor_ns=233065219969000 main_entry_ns=233065221093083 marker_start_ns=233065221125958 marker_end_ns=233065221148666 exit_ns=233065221148708
+Launched application with com.tommywu.lab.dyldfixups.rebasedense bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== RebaseDense run=5 =====
+Launched application with com.tommywu.lab.dyldfixups.rebasedense bundle identifier.
+DYLDLAB_RESULT variant=rebase_dense wall_ns=233065962654416 user_us=3813 system_us=4182 faults=268 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=rebase_dense constructor_ns=233065961428416 main_entry_ns=233065962654416 marker_start_ns=233065962695583 marker_end_ns=233065962722750 exit_ns=233065962722791
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== RebaseSparse run=1 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasesparse
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasesparse" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           BSErrorCodeDescription = RequestDenied
+           FBSOpenApplicationRequestID = 0x8985
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+===== RebaseSparse run=2 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasesparse
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasesparse" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+           FBSOpenApplicationRequestID = 0xd1f3
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== RebaseSparse run=3 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasesparse
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasesparse" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           BSErrorCodeDescription = RequestDenied
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           FBSOpenApplicationRequestID = 0x1965
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+===== RebaseSparse run=4 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasesparse
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasesparse" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           BSErrorCodeDescription = RequestDenied
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           FBSOpenApplicationRequestID = 0x1245
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+===== RebaseSparse run=5 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasesparse
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasesparse" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           FBSOpenApplicationRequestID = 0xd9c6
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasesparse because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+===== BindRepeated run=1 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.bindrepeated
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.bindrepeated" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           BSErrorCodeDescription = RequestDenied
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           FBSOpenApplicationRequestID = 0x90b1
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+===== BindRepeated run=2 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.bindrepeated
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.bindrepeated" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           FBSOpenApplicationRequestID = 0xb3d3
+           BSErrorCodeDescription = RequestDenied
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== BindRepeated run=3 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.bindrepeated
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.bindrepeated" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           FBSOpenApplicationRequestID = 0xb68
+           BSErrorCodeDescription = RequestDenied
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== BindRepeated run=4 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.bindrepeated
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.bindrepeated" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+           FBSOpenApplicationRequestID = 0xa95a
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== BindRepeated run=5 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.bindrepeated
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.bindrepeated" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+           FBSOpenApplicationRequestID = 0xf370
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.bindrepeated because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+===== BindUnique run=1 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasedense
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasedense" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           FBSOpenApplicationRequestID = 0xf9a1
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== BindUnique run=2 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasedense
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasedense" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+           FBSOpenApplicationRequestID = 0xdc5e
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== BindUnique run=3 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasedense
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasedense" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           BSErrorCodeDescription = RequestDenied
+           FBSOpenApplicationRequestID = 0xde2d
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== BindUnique run=4 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasedense
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasedense" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+           FBSOpenApplicationRequestID = 0x9b82
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== BindUnique run=5 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.rebasedense
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.rebasedense" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           FBSOpenApplicationRequestID = 0x1b6d
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.rebasedense because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+===== InitHeavy run=1 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.baseline
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.baseline" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           BSErrorCodeDescription = RequestDenied
+           FBSOpenApplicationRequestID = 0x7b8e
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== InitHeavy run=2 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.baseline
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.baseline" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           BSErrorCodeDescription = RequestDenied
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           FBSOpenApplicationRequestID = 0x8477
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== InitHeavy run=3 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.baseline
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.baseline" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           FBSOpenApplicationRequestID = 0xecdf
+           BSErrorCodeDescription = RequestDenied
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+===== InitHeavy run=4 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.baseline
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.baseline" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           BSErrorCodeDescription = RequestDenied
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           FBSOpenApplicationRequestID = 0x21a4
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+               BSErrorCodeDescription = Security
+===== InitHeavy run=5 =====
+ERROR: The application failed to launch. (com.apple.dt.CoreDeviceError error 10002 (0x2712))
+       BundleIdentifier = com.tommywu.lab.dyldfixups.baseline
+       ----------------------------------------
+           The request to open "com.tommywu.lab.dyldfixups.baseline" failed. (FBSOpenApplicationServiceErrorDomain error 1 (0x01))
+           NSLocalizedFailureReason = The request was denied by service delegate (SBMainWorkspace) for reason: Security ("Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user").
+           FBSOpenApplicationRequestID = 0xf383
+           BSErrorCodeDescription = RequestDenied
+       ----------------------------------------
+               The operation couldn’t be completed. Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user. (FBSOpenApplicationErrorDomain error 3 (0x03))
+               BSErrorCodeDescription = Security
+               NSLocalizedFailureReason = Unable to launch com.tommywu.lab.dyldfixups.baseline because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.

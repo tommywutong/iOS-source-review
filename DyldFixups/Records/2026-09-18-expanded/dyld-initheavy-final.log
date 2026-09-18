@@ -1,0 +1,320 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project DyldFixupsLab.xcodeproj -scheme InitHeavy -configuration Release -destination platform=iOS,id=00008120-000C70962662601E -derivedDataPath DerivedData-initheavy-final DEVELOPMENT_TEAM=JASSJ2R9D6 CODE_SIGN_STYLE=Automatic PRODUCT_BUNDLE_IDENTIFIER=com.tommywu.lab.dyldfixups.baseline -allowProvisioningUpdates build
+
+Build settings from command line:
+    CODE_SIGN_STYLE = Automatic
+    DEVELOPMENT_TEAM = JASSJ2R9D6
+    PRODUCT_BUNDLE_IDENTIFIER = com.tommywu.lab.dyldfixups.baseline
+
+2026-09-18 12:07:13.757 xcodebuild[60126:27513272] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'InitHeavy' in project 'DyldFixupsLab' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 7aad4de5397cdfc7fa301c2835f74b07
+Build description path: /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/XCBuildData/7aad4de5397cdfc7fa301c2835f74b07.xcbuilddata
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/CompilationCache.noindex
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/CompilationCache.noindex
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/ModuleCache.noindex
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/ModuleCache.noindex
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKExplicitPrecompiledModules
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/PrecompiledHeaders
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/PrecompiledHeaders
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/DyldFixupsLab-1f9a5cd8c81dec9b780dd3c687760f12-VFS-iphoneos/all-product-headers.yaml
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/DyldFixupsLab-1f9a5cd8c81dec9b780dd3c687760f12-VFS-iphoneos/all-product-headers.yaml
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DyldFixupsLab.xcodeproj
+    builtin-create-build-directory /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/empty-InitHeavy.plist (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/empty-InitHeavy.plist
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp
+'-std=gnu11' -fobjc-arc -fobjc-weak -fmodules -gmodules '-fmodules-cache-path=/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/ModuleCache.noindex' -fpascal-strings -Os -fno-common '-DDYLD_EXPERIMENT_VARIANT=5' '-DNS_BLOCK_ASSERTIONS=1' '-DOBJC_OLD_DISPATCH_PROTOTYPES=0' -g '-fvisibility=hidden' -iquote /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-generated-files.hmap -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-own-target-headers.hmap -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-all-target-headers.hmap -iquote /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-project-headers.hmap -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/include -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/DerivedSources-normal/arm64 -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/DerivedSources/arm64 -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/DerivedSources -F/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/InitHeavy.LinkFileList (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/InitHeavy.LinkFileList
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+'-std=gnu11' -fmodules -gmodules '-fmodules-cache-path=/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/ModuleCache.noindex' -fpascal-strings -Os -fno-common '-DDYLD_EXPERIMENT_VARIANT=5' -g '-fvisibility=hidden' -iquote /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-generated-files.hmap -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-own-target-headers.hmap -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-all-target-headers.hmap -iquote /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-project-headers.hmap -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/include -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/DerivedSources-normal/arm64 -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/DerivedSources/arm64 -I/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/DerivedSources -F/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.hmap (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.hmap
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.DependencyStaticMetadataFileList (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.DependencyMetadataFileList (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-project-headers.hmap (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-project-headers.hmap
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-own-target-headers.hmap (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-generated-files.hmap (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-generated-files.hmap
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-all-target-headers.hmap (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-all-target-headers.hmap
+
+MkDir /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    /bin/mkdir -p /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/DerivedSources/Entitlements.plist (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/DerivedSources/Entitlements.plist
+
+WriteAuxiliaryFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-all-non-framework-target-headers.hmap (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    write-file /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy-all-non-framework-target-headers.hmap
+
+ProcessProductPackaging /Users/tommywu/Library/Developer/Xcode/UserData/Provisioning\ Profiles/7fb72b73-b47b-46e0-a0b0-515ab3b6029e.mobileprovision /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/embedded.mobileprovision (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    builtin-productPackagingUtility /Users/tommywu/Library/Developer/Xcode/UserData/Provisioning\ Profiles/7fb72b73-b47b-46e0-a0b0-515ab3b6029e.mobileprovision -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/embedded.mobileprovision
+
+ProcessProductPackaging "" /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.app.xcent (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    
+    Entitlements:
+    
+    {
+    "application-identifier" = "JASSJ2R9D6.com.tommywu.lab.dyldfixups.baseline";
+    "com.apple.developer.team-identifier" = JASSJ2R9D6;
+    "get-task-allow" = 1;
+}
+    
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.app.xcent
+
+ProcessProductPackagingDER /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.app.xcent /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.app.xcent.der (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    /usr/bin/derq query -f xml -i /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.app.xcent -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.app.xcent.der --raw
+
+ProcessInfoPlistFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/Info.plist /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/empty-InitHeavy.plist (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    builtin-infoPlistUtility /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/empty-InitHeavy.plist -producttype com.apple.product-type.application -genpkginfo /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -requiredArchitecture arm64 -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/Info.plist
+
+ScanDependencies /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/Generated/InitHeavy/payload.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    
+    Using response file: /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    builtin-ScanDependencies -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.o.scan -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -target arm64-apple-ios15.0 -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Werror\=return-type -Wdocumentation -Wunreachable-code -Wquoted-include-in-framework-header -Werror\=deprecated-objc-isa-usage -Werror\=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-float-conversion -Wnon-literal-null-conversion -Wobjc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Winfinite-recursion -Wcomma -Wblock-capture-autoreleasing -Wstrict-prototypes -Wno-semicolon-before-method-body -Wunguarded-availability @/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.d --serialize-diagnostics /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.dia -c /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/Generated/InitHeavy/payload.c -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.o
+
+ScanDependencies /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/Sources/main.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    
+    Using response file: /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp
+    
+    builtin-ScanDependencies -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.o.scan -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -ivfsstatcache /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -target arm64-apple-ios15.0 -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Werror\=return-type -Wdocumentation -Wunreachable-code -Wquoted-include-in-framework-header -Wno-implicit-atomic-properties -Werror\=deprecated-objc-isa-usage -Wno-objc-interface-ivars -Werror\=objc-root-class -Wno-arc-repeated-use-of-weak -Wimplicit-retain-self -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-float-conversion -Wnon-literal-null-conversion -Wobjc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wdeprecated-implementations -Wno-implicit-fallthrough -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -Winfinite-recursion -Wcomma -Wblock-capture-autoreleasing -Wstrict-prototypes -Wno-semicolon-before-method-body -Wunguarded-availability @/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp -MMD -MT dependencies -MF /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.d --serialize-diagnostics /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.dia -c /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/Sources/main.m -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.o
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_AvailabilityInternal-1SVE2GHKABTZKUAEHCQISAB13.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_AvailabilityInternal-1SVE2GHKABTZKUAEHCQISAB13.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_float-11QJNUIL1A4XSRC3P96LFXJDS.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_float-11QJNUIL1A4XSRC3P96LFXJDS.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/ptrcheck-CH43KG89T94M92AUATVCSYQKB.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/ptrcheck-CH43KG89T94M92AUATVCSYQKB.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdarg-D9XHRZ8P64I3X8KNRLIYNZ7HQ.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdarg-D9XHRZ8P64I3X8KNRLIYNZ7HQ.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stddef-2D4S3S6OE6YKQV8TZKS6KS5HR.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stddef-2D4S3S6OE6YKQV8TZKS6KS5HR.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation1-5P2HXKKFXMMPSSEKYZPELDUD7.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation1-5P2HXKKFXMMPSSEKYZPELDUD7.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation2-FZP3LIZBRN4PBBONV7Y7P3Z0.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation2-FZP3LIZBRN4PBBONV7Y7P3Z0.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdbool-581ORJ1N73BSW8S2GPW0P0F7Q.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdbool-581ORJ1N73BSW8S2GPW0P0F7Q.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stddef-8G18R2SUFSGZU1T1VRF82SRR8.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stddef-8G18R2SUFSGZU1T1VRF82SRR8.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/ptrcheck-60ZCC7N70MN0BVP52Z9GVNH46.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/ptrcheck-60ZCC7N70MN0BVP52Z9GVNH46.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_float-5U6VYYVW4ORQRO0VYA7GRTD6B.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_float-5U6VYYVW4ORQRO0VYA7GRTD6B.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_AvailabilityInternal-8FVJDWNH7KVODAMBKZM5YOCW7.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_AvailabilityInternal-8FVJDWNH7KVODAMBKZM5YOCW7.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdarg-36XO8K7RZ31NKDD3V7NUXGORC.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdarg-36XO8K7RZ31NKDD3V7NUXGORC.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation1-9P3U55WKRJVQFCZE4HURY6Q7N.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation1-9P3U55WKRJVQFCZE4HURY6Q7N.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdint-5XPK38ZYXWUTNAFL9EEZGJVEZ.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdint-5XPK38ZYXWUTNAFL9EEZGJVEZ.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation2-2RJ5YOVYX6RKM8S1OOYXMCA33.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation2-2RJ5YOVYX6RKM8S1OOYXMCA33.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_limits-P9JPD3N9TMHHV6RIZ8GNT36E.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_limits-P9JPD3N9TMHHV6RIZ8GNT36E.scan
+
+CompileC /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/Generated/InitHeavy/payload.c normal arm64 c com.apple.compilers.llvm.clang.1_0.compiler (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    
+    Using response file: /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp
+    
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -ivfsstatcache /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -target arm64-apple-ios15.0 -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Werror\=return-type -Wdocumentation -Wunreachable-code -Wquoted-include-in-framework-header -Werror\=deprecated-objc-isa-usage -Werror\=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-float-conversion -Wnon-literal-null-conversion -Wobjc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-implicit-fallthrough -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -fstrict-aliasing -Wdeprecated-declarations -Wno-sign-conversion -Winfinite-recursion -Wcomma -Wblock-capture-autoreleasing -Wstrict-prototypes -Wno-semicolon-before-method-body -Wunguarded-availability @/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/7187679823f38a2a940e0043cdf9d637-common-args.resp -MMD -MT dependencies -MF /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.d --serialize-diagnostics /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.dia -c /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/Generated/InitHeavy/payload.c -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/payload.o
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdint-2S3X90OUMR46VCEGZAO5H4BCU.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_stdint-2S3X90OUMR46VCEGZAO5H4BCU.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation3-BKE962CZTJKXIXJOMXYDHGI5F.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_DarwinFoundation3-BKE962CZTJKXIXJOMXYDHGI5F.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_inttypes-C6EV34ZFM270ST3G708H22EYJ.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/_Builtin_inttypes-C6EV34ZFM270ST3G708H22EYJ.scan
+
+PrecompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/Darwin-3VE9EPRWJG9TAXO67J4UOPU2B.scan
+    cd /
+    builtin-precompileModule /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules/Darwin-3VE9EPRWJG9TAXO67J4UOPU2B.scan
+
+CompileC /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/Sources/main.m normal arm64 objective-c com.apple.compilers.llvm.clang.1_0.compiler (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    
+    Using response file: /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp
+    
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -ivfsstatcache /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKStatCaches.noindex/iphoneos27.0-24A430-6c78b3cbc238196c85e1bf6c792c5915.sdkstatcache -target arm64-apple-ios15.0 -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -fno-color-diagnostics -fmodules-prune-interval\=86400 -fmodules-prune-after\=345600 -fbuild-session-file\=/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/ModuleCache.noindex/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror\=non-modular-include-in-framework-module -Wno-trigraphs -Wno-missing-field-initializers -Wno-missing-prototypes -Werror\=return-type -Wdocumentation -Wunreachable-code -Wquoted-include-in-framework-header -Wno-implicit-atomic-properties -Werror\=deprecated-objc-isa-usage -Wno-objc-interface-ivars -Werror\=objc-root-class -Wno-arc-repeated-use-of-weak -Wimplicit-retain-self -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-float-conversion -Wnon-literal-null-conversion -Wobjc-literal-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wdeprecated-implementations -Wno-implicit-fallthrough -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Wno-sign-conversion -Winfinite-recursion -Wcomma -Wblock-capture-autoreleasing -Wstrict-prototypes -Wno-semicolon-before-method-body -Wunguarded-availability @/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/e6072d4f65d7061329687fe24e3d63a7-common-args.resp -MMD -MT dependencies -MF /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.d --serialize-diagnostics /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.dia -c /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/Sources/main.m -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/main.o
+
+Ld /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/InitHeavy normal (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios15.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -L/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos -F/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -F/Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos -filelist /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/InitHeavy.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/InitHeavy_lto.o -Xlinker -dependency_info -Xlinker /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/Objects-normal/arm64/InitHeavy_dependency_info.dat -fobjc-arc -fobjc-link-runtime -Xlinker -no_adhoc_codesign -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/InitHeavy
+
+GenerateDSYMFile /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app.dSYM /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/InitHeavy (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    export PATH\=/Applications/Xcode.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Users/tommywu/miniconda3/bin:/Users/tommywu/.hermes/hermes-agent/venv/bin:/Users/tommywu/.local/bin:/Users/tommywu/.bun/bin:/Users/tommywu/.pyenv/shims:/Users/tommywu/.nvm/versions/node/v20.19.6/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/private/var/folders/qw/3___bn4n2vn83fx2gq2ycrn00000gn/T/AppTranslocation/6C3DC45D-069B-460F-AC92-736BF6981801/d/Prowl.app/Contents/MacOS:/Users/tommywu/.orbstack/bin:/Users/tommywu/.rvm/bin
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app/InitHeavy -o /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app.dSYM
+
+CodeSign /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    
+    Signing Identity:     "Apple Development: twu49097@gmail.com (8N5799D9T2)"
+    Provisioning Profile: "iOS Team Provisioning Profile: com.tommywu.lab.dyldfixups.baseline"
+                          (7fb72b73-b47b-46e0-a0b0-515ab3b6029e)
+    
+    /usr/bin/codesign --force --sign 71570F1E7FE6C4330E41E85F542B430E8B672C4E --entitlements /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/DyldFixupsLab.build/Release-iphoneos/InitHeavy.build/InitHeavy.app.xcent --timestamp\=none --generate-entitlement-der /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app
+
+RegisterExecutionPolicyException /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    builtin-RegisterExecutionPolicyException /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app
+
+Validate /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    builtin-validationUtility /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app -shallow-bundle -infoplist-subpath Info.plist
+warning: All interface orientations must be supported unless the app requires full screen. (in target 'InitHeavy' from project 'DyldFixupsLab')
+
+Touch /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app (in target 'InitHeavy' from project 'DyldFixupsLab')
+    cd /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups
+    /usr/bin/touch -c /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Products/Release-iphoneos/InitHeavy.app
+
+PruneExplicitPrecompiledModules /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/tommywu/Desktop/26暑期内容/iOS-source-review/DyldFixups/DerivedData-initheavy-final/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+** BUILD SUCCEEDED **
+

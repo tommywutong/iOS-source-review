@@ -1,0 +1,24 @@
+===== BindUnique run=2 =====
+Launched application with com.tommywu.lab.dyldfixups.bindunique bundle identifier.
+Waiting for the application to terminate…
+DYLDLAB_RESULT variant=bind_unique wall_ns=235487498194166 user_us=4104 system_us=6102 faults=277 pageins=24 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=bind_unique constructor_ns=235487496966958 main_entry_ns=235487498194166 marker_start_ns=235487498230916 marker_end_ns=235487498253500 exit_ns=235487498253541
+The app terminated with the exit code 0.
+===== BindUnique run=3 =====
+DYLDLAB_RESULT variant=bind_unique wall_ns=235488057679583 user_us=3420 system_us=3573 faults=277 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=bind_unique constructor_ns=235488056549000 main_entry_ns=235488057679583 marker_start_ns=235488057715416 marker_end_ns=235488057738041 exit_ns=235488057738041
+Launched application with com.tommywu.lab.dyldfixups.bindunique bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== BindUnique run=4 =====
+Launched application with com.tommywu.lab.dyldfixups.bindunique bundle identifier.
+DYLDLAB_RESULT variant=bind_unique wall_ns=235488602464583 user_us=3417 system_us=3564 faults=278 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=bind_unique constructor_ns=235488601326166 main_entry_ns=235488602464583 marker_start_ns=235488602499208 marker_end_ns=235488602521000 exit_ns=235488602521000
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== BindUnique run=5 =====
+Launched application with com.tommywu.lab.dyldfixups.bindunique bundle identifier.
+DYLDLAB_RESULT variant=bind_unique wall_ns=235489196329375 user_us=3500 system_us=3708 faults=277 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=bind_unique constructor_ns=235489195187500 main_entry_ns=235489196329375 marker_start_ns=235489196362333 marker_end_ns=235489196383375 exit_ns=235489196383375
+Waiting for the application to terminate…
+The app terminated with the exit code 0.

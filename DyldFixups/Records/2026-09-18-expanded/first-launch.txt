@@ -1,0 +1,19 @@
+# First successful launch records
+# Captured before the matching `*-rest.txt` files. These lines are kept verbatim
+# so each variant has five complete DYLDLAB_RESULT / DYLDLAB_TIMELINE samples.
+
+===== RebaseSparse run=1 =====
+DYLDLAB_RESULT variant=rebase_sparse wall_ns=235113548141666 user_us=3069 system_us=11066 faults=352 pageins=120 cow_faults=33 task_info=0
+DYLDLAB_TIMELINE variant=rebase_sparse constructor_ns=235113547622166 main_entry_ns=235113548141666 marker_start_ns=235113548166625 marker_end_ns=235113548185875 exit_ns=235113548185875
+
+===== BindRepeated run=1 =====
+DYLDLAB_RESULT variant=bind_repeated wall_ns=235267523374333 user_us=2039 system_us=9076 faults=355 pageins=29 cow_faults=33 task_info=0
+DYLDLAB_TIMELINE variant=bind_repeated constructor_ns=235267522887750 main_entry_ns=235267523374333 marker_start_ns=235267523389458 marker_end_ns=235267523402125 exit_ns=235267523402166
+
+===== BindUnique run=1 =====
+DYLDLAB_RESULT variant=bind_unique wall_ns=235433999249791 user_us=3315 system_us=9493 faults=369 pageins=37 cow_faults=33 task_info=0
+DYLDLAB_TIMELINE variant=bind_unique constructor_ns=235433998782583 main_entry_ns=235433999249791 marker_start_ns=235433999263666 marker_end_ns=235433999274833 exit_ns=235433999274875
+
+===== InitHeavy run=1 =====
+DYLDLAB_RESULT variant=init_heavy wall_ns=235652225487375 user_us=4037 system_us=7079 faults=347 pageins=36 cow_faults=33 task_info=0
+DYLDLAB_TIMELINE variant=init_heavy constructor_ns=235652223435416 main_entry_ns=235652225487375 marker_start_ns=235652225517708 marker_end_ns=235652225517708 exit_ns=235652225517708

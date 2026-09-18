@@ -1,0 +1,42 @@
+DYLDLAB_PHASE variant=Baseline phase=build bundle_id=com.tommywu.lab.dyldfixups.baseline wall_ms=10343
+DYLDLAB_PHASE variant=Baseline phase=install bundle_id=com.tommywu.lab.dyldfixups.baseline wall_ms=3126
+DYLDLAB_PHASE variant=Baseline phase=launch run=1 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=1168
+DYLDLAB_PHASE variant=Baseline phase=launch run=2 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=1698
+DYLDLAB_PHASE variant=Baseline phase=launch run=3 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=1146
+DYLDLAB_PHASE variant=Baseline phase=launch run=4 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=781
+DYLDLAB_PHASE variant=Baseline phase=launch run=5 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=676
+DYLDLAB_PHASE variant=RebaseDense phase=build bundle_id=com.tommywu.lab.dyldfixups.rebasedense wall_ms=6013
+DYLDLAB_PHASE variant=RebaseDense phase=install bundle_id=com.tommywu.lab.dyldfixups.rebasedense wall_ms=4901
+DYLDLAB_PHASE variant=RebaseDense phase=launch run=1 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=627
+DYLDLAB_PHASE variant=RebaseDense phase=launch run=2 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=600
+DYLDLAB_PHASE variant=RebaseDense phase=launch run=3 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=468
+DYLDLAB_PHASE variant=RebaseDense phase=launch run=4 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=470
+DYLDLAB_PHASE variant=RebaseDense phase=launch run=5 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=706
+DYLDLAB_PHASE variant=RebaseSparse phase=build bundle_id=com.tommywu.lab.dyldfixups.rebasesparse wall_ms=4490
+DYLDLAB_PHASE variant=RebaseSparse phase=install bundle_id=com.tommywu.lab.dyldfixups.rebasesparse wall_ms=3350
+DYLDLAB_PHASE variant=RebaseSparse phase=launch run=1 bundle_id=com.tommywu.lab.dyldfixups.rebasesparse host_ms=505
+DYLDLAB_PHASE variant=RebaseSparse phase=launch run=2 bundle_id=com.tommywu.lab.dyldfixups.rebasesparse host_ms=543
+DYLDLAB_PHASE variant=RebaseSparse phase=launch run=3 bundle_id=com.tommywu.lab.dyldfixups.rebasesparse host_ms=660
+DYLDLAB_PHASE variant=RebaseSparse phase=launch run=4 bundle_id=com.tommywu.lab.dyldfixups.rebasesparse host_ms=497
+DYLDLAB_PHASE variant=RebaseSparse phase=launch run=5 bundle_id=com.tommywu.lab.dyldfixups.rebasesparse host_ms=431
+DYLDLAB_PHASE variant=BindRepeated phase=build bundle_id=com.tommywu.lab.dyldfixups.bindrepeated wall_ms=8675
+DYLDLAB_PHASE variant=BindRepeated phase=install bundle_id=com.tommywu.lab.dyldfixups.bindrepeated wall_ms=4114
+DYLDLAB_PHASE variant=BindRepeated phase=launch run=1 bundle_id=com.tommywu.lab.dyldfixups.bindrepeated host_ms=1485
+DYLDLAB_PHASE variant=BindRepeated phase=launch run=2 bundle_id=com.tommywu.lab.dyldfixups.bindrepeated host_ms=807
+DYLDLAB_PHASE variant=BindRepeated phase=launch run=3 bundle_id=com.tommywu.lab.dyldfixups.bindrepeated host_ms=701
+DYLDLAB_PHASE variant=BindRepeated phase=launch run=4 bundle_id=com.tommywu.lab.dyldfixups.bindrepeated host_ms=919
+DYLDLAB_PHASE variant=BindRepeated phase=launch run=5 bundle_id=com.tommywu.lab.dyldfixups.bindrepeated host_ms=1076
+DYLDLAB_PHASE variant=BindUnique phase=build bundle_id=com.tommywu.lab.dyldfixups.rebasedense wall_ms=19830
+DYLDLAB_PHASE variant=BindUnique phase=install bundle_id=com.tommywu.lab.dyldfixups.rebasedense wall_ms=3772
+DYLDLAB_PHASE variant=BindUnique phase=launch run=1 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=616
+DYLDLAB_PHASE variant=BindUnique phase=launch run=2 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=419
+DYLDLAB_PHASE variant=BindUnique phase=launch run=3 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=378
+DYLDLAB_PHASE variant=BindUnique phase=launch run=4 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=725
+DYLDLAB_PHASE variant=BindUnique phase=launch run=5 bundle_id=com.tommywu.lab.dyldfixups.rebasedense host_ms=783
+DYLDLAB_PHASE variant=InitHeavy phase=build bundle_id=com.tommywu.lab.dyldfixups.baseline wall_ms=8248
+DYLDLAB_PHASE variant=InitHeavy phase=install bundle_id=com.tommywu.lab.dyldfixups.baseline wall_ms=2082
+DYLDLAB_PHASE variant=InitHeavy phase=launch run=1 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=517
+DYLDLAB_PHASE variant=InitHeavy phase=launch run=2 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=676
+DYLDLAB_PHASE variant=InitHeavy phase=launch run=3 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=518
+DYLDLAB_PHASE variant=InitHeavy phase=launch run=4 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=468
+DYLDLAB_PHASE variant=InitHeavy phase=launch run=5 bundle_id=com.tommywu.lab.dyldfixups.baseline host_ms=555

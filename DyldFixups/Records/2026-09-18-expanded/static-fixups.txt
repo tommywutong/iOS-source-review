@@ -1,0 +1,18 @@
+===== Baseline: static summary =====
+DYLDLAB_STATIC variant=Baseline image=Baseline rebases=0 binds=8 imports=8 chain_pages=1 page_sizes=4000
+===== RebaseDense: static summary =====
+DYLDLAB_STATIC variant=RebaseDense image=RebaseDense rebases=0 binds=9 imports=9 chain_pages=1 page_sizes=4000
+DYLDLAB_STATIC variant=RebaseDense image=RebaseDensePayload rebases=128 binds=0 imports=0 chain_pages=1 page_sizes=4000
+===== RebaseSparse: static summary =====
+DYLDLAB_STATIC variant=RebaseSparse image=RebaseSparse rebases=0 binds=9 imports=9 chain_pages=1 page_sizes=4000
+DYLDLAB_STATIC variant=RebaseSparse image=RebaseSparsePayload rebases=128 binds=0 imports=0 chain_pages=128 page_sizes=4000
+===== BindRepeated: static summary =====
+DYLDLAB_STATIC variant=BindRepeated image=BindRepeated rebases=0 binds=9 imports=9 chain_pages=1 page_sizes=4000
+DYLDLAB_STATIC variant=BindRepeated image=BindProvider rebases=0 binds=0 imports=0 chain_pages=0 page_sizes=none
+DYLDLAB_STATIC variant=BindRepeated image=BindRepeatedPayload rebases=0 binds=4096 imports=1 chain_pages=2 page_sizes=4000
+===== BindUnique: static summary =====
+DYLDLAB_STATIC variant=BindUnique image=BindUnique rebases=0 binds=9 imports=9 chain_pages=1 page_sizes=4000
+DYLDLAB_STATIC variant=BindUnique image=BindProvider rebases=0 binds=0 imports=0 chain_pages=0 page_sizes=none
+DYLDLAB_STATIC variant=BindUnique image=BindUniquePayload rebases=0 binds=4096 imports=4096 chain_pages=2 page_sizes=4000
+===== InitHeavy: static summary =====
+DYLDLAB_STATIC variant=InitHeavy image=InitHeavy rebases=0 binds=8 imports=8 chain_pages=1 page_sizes=4000

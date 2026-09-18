@@ -28,6 +28,7 @@
 | `RebaseSparsePayload` | 128 | 0 | 0 | 128 | 同数内部指针分散为每页一个 |
 | `BindRepeatedPayload` | 0 | 4,096 | 1 | 2 | 4,096 个位置绑定同一导入符号 |
 | `BindUniquePayload` | 0 | 4,096 | 4,096 | 2 | 4,096 个位置绑定不同导入符号 |
+| `InitHeavy`（app） | 0 | 8 | 8 | 1 | 4,096 个 C constructor；不引入专门的 framework fixup 负载 |
 
 这证明现代 arm64 产物中 rebase 与 bind 仍是不同语义的 fixup：前者目标为当前 image 内的 runtime offset，后者携带外部 provider/symbol；同时两者均编码于同一套 chained-fixups 页链，而不是两个全局扫描阶段。
 
@@ -47,37 +48,83 @@
 
 ## 真机环境与动态数据
 
-- **设备**：iPhone 15（`iPhone15,4`，arm64e），iOS 26.6.2（Build 23G90），Developer Mode 已启用。
-- **签名**：免费个人开发者 profile，自动签名；BindUnique 因 App ID 创建周配额耗尽，借用了已注册的 `rebasedense`/`rebasedense.payload` Bundle ID 完成测试，二进制负载仍为 BindUnique 的 4,096 个不同符号绑定。
-- **运行**：每个变体安装一次，随后执行 5 次 `--terminate-existing` 的进程重启；记录首次启动与后续 4 次进程重启的 page fault / pagein 均值，完成后卸载该实验 App。
+- **设备**：iPhone 15（`iPhone15,4`，arm64e），iOS 26.6.2（Build 23G90），Developer Mode 已启用，DDI 可用。
+- **变体**：Baseline、RebaseDense、RebaseSparse、BindRepeated、BindUnique、InitHeavy。
+- **运行**：每个变体安装一次，执行 5 次 `--terminate-existing` 进程重启，最后卸载；每次应用启动均输出 `DYLDLAB_RESULT` 和 `DYLDLAB_TIMELINE`。
+- **profile**：每个真实 Bundle ID 的 profile 在安装 App 前显式注册到设备。`BindUnique` 五次使用原始 `com.tommywu.lab.dyldfixups.bindunique`。由于免费账号 App ID 创建配额，`InitHeavy` 的二进制使用 variant 5，但临时复用已注册的 Baseline Bundle ID/profile；这只影响签名身份，不改变 InitHeavy 代码。
 
 ### 静态与动态对照
 
-| 变体 | rebase | bind | imports | chain 页 | 首次 faults | 首次 pageins | 稳态 faults | 稳态 pageins |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Baseline | 0 | 8 | 8 | 1 | 338 | 16 | 264.0 | 1.2 |
-| RebaseDense | 128 | 0 | 0 | 1 | 345 | 13 | 267.0 | 1.5 |
-| RebaseSparse | 128 | 0 | 0 | 128 | 346 | 21 | 268.0 | 1.0 |
-| BindRepeated | 0 | 4,096 | 1 | 2 | 355 | 25 | 271.0 | 1.2 |
-| BindUnique | 0 | 4,096 | 4,096 | 2 | 371 | 23 | 278.2 | 1.0 |
+| 变体 | rebase | bind | imports | chain 页 | 首次 faults | 首次 pageins | 后 4 次 faults 均值 | 后 4 次 pageins 均值 | constructor→main 均值 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Baseline | 0 | 8 | 8 | 1 | 340 | 15 | 266.0 | 1.25 | 1.310 ms |
+| RebaseDense | 128 | 0 | 0 | 1 | 346 | 24 | 268.0 | 1.00 | 1.013 ms |
+| RebaseSparse | 128 | 0 | 0 | 128 | 352 | 120 | 268.3 | 2.75 | 0.987 ms |
+| BindRepeated | 0 | 4,096 | 1 | 2 | 355 | 29 | 272.0 | 1.00 | 1.068 ms |
+| BindUnique | 0 | 4,096 | 4,096 | 2 | 369 | 37 | 277.3 | 6.75 | 1.021 ms |
+| InitHeavy | 0 | 8 | 8 | 1 | 347 | 36 | 272.0 | 10.00 | 1.654 ms |
 
-**观察**：
+### 启动阶段与构建阶段
 
-1. **RebaseSparse 首次 pageins 高于 RebaseDense**（21 vs 13），尽管两者静态 rebase 数量相同；唯一区别是前者覆盖 128 个分散的 16 KiB 链页，后者仅 1 页。这与“fixup 页面分布影响首次启动资源访问”一致，但本实验不能单独证明因果关系。
-2. **BindRepeated 与 BindUnique 在稳态 pageins 无显著差异**（均值 1.2 vs 1.0），尽管后者有 4,096 个独立导入符号、前者仅 1 个。在此设备、系统版本与二进制规模下，不同导入数量未表现为可观测的 pagein 差异；不能推出“bind 无成本”，但也无法从本实验证明“每个 bind 必然触发新的符号查找 I/O”。
-3. **首次启动与同次安装后续进程重启存在明显差距**：首次观测的 faults 在 338–371 之间、pageins 在 13–25 之间；后续观测稳定在 264–278 faults、pageins 接近 1。这是本设备、此安装序列下的观察；未隔离 OS 缓存、安装状态或其他进程活动，因此不将该差异归因为单一机制，也不外推为固定比例。
+`build` / `install` / `launch` 是主机侧命令 wall time；它们不是 App 内部的 dyld 阶段计时。以下是一次六变体批次的记录，原始值在 `Records/2026-09-18-expanded/phase-output.txt`：
 
-### 实验局限
+| 变体 | build wall | install wall | 5 次 host launch 均值 |
+| --- | ---: | ---: | ---: |
+| Baseline | 10,343 ms | 3,126 ms | 1,093.8 ms |
+| RebaseDense | 6,013 ms | 4,901 ms | 574.2 ms |
+| RebaseSparse | 4,490 ms | 3,350 ms | 527.2 ms |
+| BindRepeated | 8,675 ms | 4,114 ms | 997.6 ms |
+| BindUnique | 19,830 ms | 3,772 ms | 584.2 ms |
+| InitHeavy | 8,248 ms | 2,082 ms | 546.8 ms |
 
-- **单一设备与系统**：iPhone 15 / iOS 26.6.2；不同设备、shared cache 版本、dyld 策略可能表现不同。
-- **微型负载**：每个 payload 只有 128 或 4,096 个 fixup，远小于真实 App framework；更大规模下 bind 成本可能显现。
-- **测量口径**：`task_info` 的 faults/pageins 包含整个进程地址空间，不限于 fixup 页面；无法分离 dyld fixup pass 专属 I/O。
-- **console 记录异常**：Baseline 的 `run=1` 下出现两条 `DYLDLAB_RESULT`，而 `main` 只执行一次打印。报告将最早一条（338 faults / 16 pageins）作为首次观测，其余结果仅用于稳态背景；这条重复记录不计为额外独立样本。
-- **PrebuiltLoader 未确认**：实验未 dump dyld closure 或 hook `applyFixups`，无法确认这些二进制是否走 JustInTimeLoader 还是 PrebuiltLoader；若为后者，bind target 已预解析，不会在启动时遍历 export trie。
+阶段解释必须分开：
+
+1. **构建期**：`xcodebuild` 编译、链接、签名和 Xcode 增量构建状态的总 wall time；BindUnique 较长不能直接归因于 bind 运行时成本。
+2. **安装期**：profile 注册、App 安装和 CoreDevice 通信的主机 wall time；不属于 App 启动时间。
+3. **pre-main 可观测区间**：`constructor_ns → main_entry_ns`。这是本应用 constructor 到 `main` 的区间；它不含 dyld 私有 loader/fixup/ObjC runtime 各阶段的独立计时。
+4. **main 区间**：`main_entry_ns → marker_start_ns` 几乎只包含输出、快照和控制开销；`marker_start_ns → marker_end_ns` 是实验 payload marker 的执行区间。
+5. **退出前**：`exit_ns` 和 `before_exit` signpost 记录 marker 后到退出的边界；进程退出由 `devicectl` 等待完成。
+
+### 真机观察
+
+1. **页面分布差异清晰**：RebaseDense 与 RebaseSparse 都是 128 个 rebase，但首次 pageins 为 24 与 120；后续均接近 1–3。这个对照支持“fixup 所在页面分布会影响首次访问资源”的有限结论，不证明所有 pagein 都由 fixup 单独触发。
+2. **重复 bind 与唯一 bind 没有可隔离的单次 bind 成本证据**：BindRepeated 首次 29 pageins、BindUnique 首次 37，后续均值分别 1.00 与 6.75；两组启动顺序、安装状态和设备全局缓存不能完全隔离，因此不能将差值归因于“符号字符串查找次数”。静态 imports 差异仍然被准确验证。
+3. **InitHeavy 的 constructor 区间更长**：InitHeavy 平均 constructor→main 为 1.654 ms，Baseline 为 1.310 ms；它验证了大量用户态 constructor 能改变 main 前可观测区间，但该区间仍不是 dyld 私有 pre-main 时间。
+4. **进程累计指标**：`faults` / `pageins` / `cow_faults` 是 `main` 时读取的整个进程累计值；新增 `resident_bytes`、`footprint_bytes`、`virtual_bytes`、`internal_bytes`、`compressed_bytes` 和 `images` 字段可供后续对照，但不能将某个值直接标成单个 fixup 的成本。
+
+### 实验局限与复用边界
+
+- **单一设备与系统**：iPhone 15 / iOS 26.6.2；不同设备、shared cache、系统策略可能不同。
+- **微型负载**：payload 只有 128 或 4,096 个 fixup；InitHeavy 有 4,096 个 constructor，仍远小于大型真实 App。
+- **host launch wall time 不等于启动时间**：包含 CoreDevice、console 转发和等待进程退出；需要严格启动时长时，应使用成功的 App Launch trace或统一设备端时间源。
+- **App Launch trace**：本次 trace 尝试曾被设备信任层拒绝，`Records/2026-09-18-expanded/AppLaunch-Baseline.trace` 仅保存失败尝试，不作为有效启动时长。
+- **PrebuiltLoader 未确认**：未 dump dyld closure 或 hook `applyFixups`，无法确认具体镜像走 JustInTimeLoader 还是 PrebuiltLoader；若为后者，bind target 可已预解析。
+- **原始数据不可覆盖**：本批次所有原始文件保存在 `Records/2026-09-18-expanded/`，后续实验应使用新的时间戳目录。
 
 ## 当前判定规则
 
-1. 若 release Mach-O 有 `LC_DYLD_CHAINED_FIXUPS`，则本次实验验证的是 chained-fixups 路径；不使用“先 rebase 后 bind 两轮扫描”的旧式模型解释结果。
-2. 若 `RebaseSparse` 在相近 rebase 数量下稳定高于 `RebaseDense` 的累计 pageins/faults，结论限于“fixup 页面分散与更高 pre-main 资源消耗相关”。
-3. 若 `BindUnique` 与 `BindRepeated` 的静态 imports 与启动资源差异不显著，不得推出 bind 无成本；只能说此设备、系统、二进制规模和测量口径下未观察到显著差异。
-4. 所有结论都按“源码机制”“Mach-O 静态事实”“真机观测”三层分别表述。
+1. 若 release Mach-O 有 `LC_DYLD_CHAINED_FIXUPS`，则本次验证的是 chained-fixups 路径；不使用“先 rebase 后 bind 两轮扫描”的旧式模型解释结果。
+2. RebaseDense / RebaseSparse 的差异只支持“页面布局与首次资源访问相关”的受限表述。
+3. BindRepeated / BindUnique 的差异不能单独证明每个 bind 都会现场遍历 export trie，也不能证明 bind 无成本。
+4. InitHeavy 的差异只支持“用户态 constructor 会扩大 constructor→main 区间”的表述。
+5. 所有结论分为“源码机制”“Mach-O 静态事实”“真机观测”“主机控制耗时”四层。
+
+## 扩展插桩验证
+
+扩展插桩版 Baseline 已在同一台真机启动，原始输出保存于 `Records/2026-09-18-expanded/instrumented-baseline.txt`：
+
+| 字段 | 本次值 | 含义 |
+| --- | ---: | --- |
+| `faults` / `pageins` / `cow_faults` | 280 / 15 / 36 | `main` 时刻的进程累计 VM 事件。 |
+| `images` | 177 | `_dyld_image_count()` 在 `main` 时刻的加载 image 数。 |
+| `resident_bytes` | 2,850,816 | `TASK_VM_INFO.resident_size`。 |
+| `footprint_bytes` | 1,476,112 | `TASK_VM_INFO.phys_footprint`。 |
+| `virtual_bytes` | 474,681,737,216 | `TASK_VM_INFO.virtual_size`。 |
+| `internal_bytes` / `compressed_bytes` | 1,114,112 / 0 | `TASK_VM_INFO` 的 internal / compressed。 |
+| constructor→main | 0.772 ms | `constructor_ns=1539496599791` 到 `main_entry_ns=1539497372125`。 |
+| constructor tail→main | 0.772 ms | 两个本应用 constructor 之间只有 84 ns；它不包含其他 image 的 constructor。 |
+| main→exit | 0.066 ms | 此 CLI 风格 App 无 UI run loop，几乎立即退出。 |
+
+代码还在四个边界写入 `os_signpost`：`process_lifecycle` interval、`main_entry`、`before_exit`。本批次的 App Launch trace 因早期设备信任失败不可用，因此不将 signpost 声明为已由 Instruments trace 解析验证；源代码与控制台时间线共同提供可复用边界。
+
+真机进程快速退出后，CoreDevice 可能在已收到两行控制台输出后报告“无法确定 PID”。该状态不覆盖应用已经写入并刷新的 `DYLDLAB_RESULT` / `DYLDLAB_TIMELINE`；原始归档中保留了完整诊断。

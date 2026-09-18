@@ -1,0 +1,5 @@
+# Build logs are immutable raw evidence. Preserve Xcode's original whitespace.
+DyldFixups/Records/**/*.log -whitespace
+# Console captures are immutable raw evidence. Preserve terminal line endings.
+DyldFixups/Records/**/*.txt -whitespace
+DyldFixups/Records/**/README.md whitespace

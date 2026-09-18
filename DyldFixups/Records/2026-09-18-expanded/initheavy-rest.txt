@@ -1,0 +1,24 @@
+===== InitHeavy run=2 =====
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+DYLDLAB_RESULT variant=init_heavy wall_ns=235697168718291 user_us=3182 system_us=3822 faults=272 pageins=15 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=init_heavy constructor_ns=235697166655958 main_entry_ns=235697168718291 marker_start_ns=235697168749625 marker_end_ns=235697168749625 exit_ns=235697168749666
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== InitHeavy run=3 =====
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+Waiting for the application to terminate…
+DYLDLAB_RESULT variant=init_heavy wall_ns=235697958544208 user_us=3564 system_us=3446 faults=272 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=init_heavy constructor_ns=235697957127125 main_entry_ns=235697958544208 marker_start_ns=235697958577916 marker_end_ns=235697958577916 exit_ns=235697958577958
+The app terminated with the exit code 0.
+===== InitHeavy run=4 =====
+DYLDLAB_RESULT variant=init_heavy wall_ns=235698745790791 user_us=3567 system_us=4142 faults=272 pageins=23 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=init_heavy constructor_ns=235698744408750 main_entry_ns=235698745790791 marker_start_ns=235698745822375 marker_end_ns=235698745822416 exit_ns=235698745822416
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== InitHeavy run=5 =====
+DYLDLAB_RESULT variant=init_heavy wall_ns=235699533862541 user_us=3358 system_us=3212 faults=272 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=init_heavy constructor_ns=235699532504125 main_entry_ns=235699533862541 marker_start_ns=235699533896875 marker_end_ns=235699533896875 exit_ns=235699533896916
+Launched application with com.tommywu.lab.dyldfixups.baseline bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.

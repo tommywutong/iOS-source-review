@@ -1,0 +1,24 @@
+===== RebaseSparse run=2 =====
+Launched application with com.tommywu.lab.dyldfixups.rebasesparse bundle identifier.
+Waiting for the application to terminate…
+DYLDLAB_RESULT variant=rebase_sparse wall_ns=235184074875208 user_us=3333 system_us=7495 faults=269 pageins=8 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=rebase_sparse constructor_ns=235184073765583 main_entry_ns=235184074875208 marker_start_ns=235184074905458 marker_end_ns=235184075139208 exit_ns=235184075139208
+The app terminated with the exit code 0.
+===== RebaseSparse run=3 =====
+Launched application with com.tommywu.lab.dyldfixups.rebasesparse bundle identifier.
+DYLDLAB_RESULT variant=rebase_sparse wall_ns=235184589818125 user_us=3328 system_us=3299 faults=268 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=rebase_sparse constructor_ns=235184588700083 main_entry_ns=235184589818125 marker_start_ns=235184589850500 marker_end_ns=235184589871500 exit_ns=235184589871541
+Waiting for the application to terminate…
+The app terminated with the exit code 0.
+===== RebaseSparse run=4 =====
+DYLDLAB_RESULT variant=rebase_sparse wall_ns=235185122514875 user_us=3267 system_us=3343 faults=268 pageins=1 cow_faults=34 task_info=0
+Launched application with com.tommywu.lab.dyldfixups.rebasesparse bundle identifier.
+Waiting for the application to terminate…
+DYLDLAB_TIMELINE variant=rebase_sparse constructor_ns=235185121428208 main_entry_ns=235185122514875 marker_start_ns=235185122546708 marker_end_ns=235185122567333 exit_ns=235185122567333
+The app terminated with the exit code 0.
+===== RebaseSparse run=5 =====
+DYLDLAB_RESULT variant=rebase_sparse wall_ns=235185657046750 user_us=3313 system_us=3347 faults=268 pageins=1 cow_faults=34 task_info=0
+DYLDLAB_TIMELINE variant=rebase_sparse constructor_ns=235185655947750 main_entry_ns=235185657046750 marker_start_ns=235185657082708 marker_end_ns=235185657103833 exit_ns=235185657103875
+Launched application with com.tommywu.lab.dyldfixups.rebasesparse bundle identifier.
+Waiting for the application to terminate…
+The app terminated with the exit code 0.

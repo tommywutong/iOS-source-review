@@ -1,0 +1,15 @@
+# Expanded instrumentation validation — Baseline
+# Device: iPhone15,4 arm64e, iOS 26.6.2. The process exited immediately after
+# flushing output, so CoreDevice reported that its PID could not be determined.
+# The two DYLDLAB lines below are the app's complete emitted result.
+
+DYLDLAB_RESULT variant=baseline wall_ns=1539497372125 user_us=4607 system_us=7512 maxrss_kb=2883584 faults=280 pageins=15 cow_faults=36 task_info=0 images=177 resident_bytes=2850816 footprint_bytes=1476112 virtual_bytes=474681737216 internal_bytes=1114112 compressed_bytes=0 vm_info=0
+DYLDLAB_TIMELINE variant=baseline constructor_ns=1539496599791 constructor_tail_ns=1539496599875 main_entry_ns=1539497372125 marker_start_ns=1539497372125 marker_end_ns=1539497372125 exit_ns=1539497438541
+
+CoreDevice final status:
+
+```text
+The process identifier of the launched application could not be determined. It may have already terminated.
+```
+
+This is expected for this short-lived CLI-style app and does not invalidate the emitted application measurements.

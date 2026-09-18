@@ -73,6 +73,16 @@ targets:
     settings:
         PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.bindunique
         GCC_PREPROCESSOR_DEFINITIONS: "DYLD_EXPERIMENT_VARIANT=4"
+  InitHeavy:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Generated/InitHeavy
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommywu.lab.dyldfixups.initheavy
+        GCC_PREPROCESSOR_DEFINITIONS: "DYLD_EXPERIMENT_VARIANT=5"
   RebaseDensePayload:
     type: framework
     platform: iOS

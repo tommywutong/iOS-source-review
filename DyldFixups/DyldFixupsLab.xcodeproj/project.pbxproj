@@ -10,6 +10,7 @@
 		048B0332D1175AC2B658ED16 /* payload.c in Sources */ = {isa = PBXBuildFile; fileRef = 84297B514E484EBF151F669D /* payload.c */; };
 		13716D0E56F766295FC35753 /* BindProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62B3B03896B07DA6C78C3E /* BindProvider.framework */; };
 		51A3CE49F893DD4D1AA6469D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3213F8AB19A56C92F9A8AE6F /* main.m */; };
+		6A9D00B30C2002508AE247F4 /* payload.c in Sources */ = {isa = PBXBuildFile; fileRef = E6F68C74080B4F6A5849FDB9 /* payload.c */; };
 		7906FADEFCF69550610F3F2F /* BindProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F62B3B03896B07DA6C78C3E /* BindProvider.framework */; };
 		7D37A707F40D05087A309A76 /* RebaseSparsePayload.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73B43D9A13E4B82983D254B1 /* RebaseSparsePayload.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8DE5153078E0F2A75CC5AC11 /* payload.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CE1F84F2E2E9027F50D41 /* payload.c */; };
@@ -29,6 +30,7 @@
 		F52299631DD83A162055548E /* payload.c in Sources */ = {isa = PBXBuildFile; fileRef = CFF86BF8F54190BB6F85C0D1 /* payload.c */; };
 		F61C645018215ADAC084E7FE /* RebaseDensePayload.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E887DD5B32434EE1038F36A /* RebaseDensePayload.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F74A8DE8FF993DA08E5462BE /* BindRepeatedPayload.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27B2DC29E648E76B780189A3 /* BindRepeatedPayload.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7B565040712E7EA980074A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3213F8AB19A56C92F9A8AE6F /* main.m */; };
 		F92A2F28C4B5210D6074E06F /* payload.c in Sources */ = {isa = PBXBuildFile; fileRef = F09B4A59A90F7513BE5476EF /* payload.c */; };
 		F9BD12B25269837601EA414B /* payload.c in Sources */ = {isa = PBXBuildFile; fileRef = 83789D192CADFC062B27D227 /* payload.c */; };
 /* End PBXBuildFile section */
@@ -147,6 +149,7 @@
 		27B2DC29E648E76B780189A3 /* BindRepeatedPayload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BindRepeatedPayload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E887DD5B32434EE1038F36A /* RebaseDensePayload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RebaseDensePayload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3213F8AB19A56C92F9A8AE6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AA130F4E1A76AD85A92024F /* InitHeavy.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = InitHeavy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C3C5C0ED9846DBE63DE2134 /* BindUnique.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BindUnique.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1CE1F84F2E2E9027F50D41 /* payload.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = payload.c; sourceTree = "<group>"; };
 		73B43D9A13E4B82983D254B1 /* RebaseSparsePayload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RebaseSparsePayload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +160,7 @@
 		B76A97066517BD10C178FAAE /* BindUniquePayload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BindUniquePayload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF86BF8F54190BB6F85C0D1 /* payload.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = payload.c; sourceTree = "<group>"; };
 		DEA51EEDE7A50E2CE2E22E88 /* RebaseSparse.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RebaseSparse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F68C74080B4F6A5849FDB9 /* payload.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = payload.c; sourceTree = "<group>"; };
 		F09B4A59A90F7513BE5476EF /* payload.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = payload.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +224,7 @@
 				312B71DE6FEC015E3FE0CA12 /* BindProvider */,
 				44B96F16728AD59FA445000D /* BindRepeated */,
 				728919F91E3D2A49D31B4E5E /* BindUnique */,
+				407F04998185DD78DF202DC9 /* InitHeavy */,
 				D84228A07F6E9615E8F59E04 /* RebaseDense */,
 				5DC88CE208FEBB9008632614 /* RebaseSparse */,
 			);
@@ -251,6 +256,14 @@
 			path = BindProvider;
 			sourceTree = "<group>";
 		};
+		407F04998185DD78DF202DC9 /* InitHeavy */ = {
+			isa = PBXGroup;
+			children = (
+				E6F68C74080B4F6A5849FDB9 /* payload.c */,
+			);
+			path = InitHeavy;
+			sourceTree = "<group>";
+		};
 		415DCDEE71183206374F00D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +273,7 @@
 				27B2DC29E648E76B780189A3 /* BindRepeatedPayload.framework */,
 				3C3C5C0ED9846DBE63DE2134 /* BindUnique.app */,
 				B76A97066517BD10C178FAAE /* BindUniquePayload.framework */,
+				3AA130F4E1A76AD85A92024F /* InitHeavy.app */,
 				1345F3CB2FF1C52A19425BB0 /* RebaseDense.app */,
 				2E887DD5B32434EE1038F36A /* RebaseDensePayload.framework */,
 				DEA51EEDE7A50E2CE2E22E88 /* RebaseSparse.app */,
@@ -491,6 +505,23 @@
 			productReference = B76A97066517BD10C178FAAE /* BindUniquePayload.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FBA577930349A494385242C2 /* InitHeavy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BF1AFBB2F9BBDC7607608DF /* Build configuration list for PBXNativeTarget "InitHeavy" */;
+			buildPhases = (
+				75EDC3F59A61FA223477D3DA /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InitHeavy;
+			packageProductDependencies = (
+			);
+			productName = InitHeavy;
+			productReference = 3AA130F4E1A76AD85A92024F /* InitHeavy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -540,6 +571,10 @@
 						DevelopmentTeam = JASSJ2R9D6;
 						ProvisioningStyle = Automatic;
 					};
+					FBA577930349A494385242C2 = {
+						DevelopmentTeam = JASSJ2R9D6;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A14414A506972DE36619A2AF /* Build configuration list for PBXProject "DyldFixupsLab" */;
@@ -561,6 +596,7 @@
 				EB66CF5B7C75A2092F36BC94 /* RebaseSparse */,
 				841E1535C31B5C84867A80AC /* BindRepeated */,
 				D4D59278EF0E59040B9767B5 /* BindUnique */,
+				FBA577930349A494385242C2 /* InitHeavy */,
 				ACC7B703D3CF68658CFC5340 /* RebaseDensePayload */,
 				7DD52B8664B1CE34016E5661 /* RebaseSparsePayload */,
 				D570E680F3271E33A2F74747 /* BindProvider */,
@@ -616,6 +652,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92A2F28C4B5210D6074E06F /* payload.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75EDC3F59A61FA223477D3DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7B565040712E7EA980074A7 /* main.m in Sources */,
+				6A9D00B30C2002508AE247F4 /* payload.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +997,22 @@
 			};
 			name = Debug;
 		};
+		5AFF2552F9FDF88EA5D27DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = "DYLD_EXPERIMENT_VARIANT=5";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tommywu.lab.dyldfixups.initheavy;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		71ED2AD222A64ACB8DA73983 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1129,6 +1190,22 @@
 			};
 			name = Release;
 		};
+		A69DADAB5CD0BE1C21168674 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = "DYLD_EXPERIMENT_VARIANT=5";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tommywu.lab.dyldfixups.initheavy;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		A7B90ED78BBCE976CF354366 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1269,6 +1346,15 @@
 			buildConfigurations = (
 				9CB5666AE65EAE27BAD44A85 /* Debug */,
 				7C54162865D9793AD97FEE46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7BF1AFBB2F9BBDC7607608DF /* Build configuration list for PBXNativeTarget "InitHeavy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69DADAB5CD0BE1C21168674 /* Debug */,
+				5AFF2552F9FDF88EA5D27DE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

@@ -34,10 +34,26 @@ def bind_payload(name: str, unique: bool):
     target = ",\n    ".join(f"provider_symbol_{i}" if unique else "provider_symbol_0" for i in range(N))
     marker = "dyldlab_bind_unique_marker" if unique else "dyldlab_bind_repeated_marker"
     return f'''#include <stddef.h>\n{decls}\n__attribute__((used)) static void (*const pointers[{N}])(void) = {{\n    {target}\n}};\nvoid {marker}(void) {{ (void)pointers[0]; }}\n'''
+def init_heavy():
+    funcs = []
+    for i in range(N):
+        funcs.append(
+            f'''__attribute__((constructor(200))) static void init_heavy_{i}(void) {{
+    uint64_t value = {i}u;
+    for (unsigned int j = 0; j < 32; ++j) value = value * 1664525u + 1013904223u;
+    init_sink ^= value;
+}}'''
+        )
+    return '''#include <stdint.h>
+static volatile uint64_t init_sink;
+''' + "\n".join(funcs) + '''
+void dyldlab_init_heavy_marker(void) { (void)init_sink; }
+'''
 
 write(OUT / "RebaseDense", rebase_dense())
 write(OUT / "RebaseSparse", rebase_sparse())
 write(OUT / "BindProvider", provider())
 write(OUT / "BindRepeated", bind_payload("BindRepeated", False))
 write(OUT / "BindUnique", bind_payload("BindUnique", True))
-print(f"generated {N} bind slots and {SPARSE_N} rebase slots")
+write(OUT / "InitHeavy", init_heavy())
+print(f"generated {N} bind slots, {SPARSE_N} rebase slots, and {N} constructors")

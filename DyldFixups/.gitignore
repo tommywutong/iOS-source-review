@@ -4,7 +4,12 @@ DerivedData*/
 DerivedData/
 build-output.txt
 static-fixups.txt
+phase-output.txt
+AppLaunch-*.trace
+.runtime-project.yml
+__pycache__/
 run-output.txt
+*-rest.txt
 *.xcuserstate
 xcuserdata/
 .DS_Store
